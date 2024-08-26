@@ -40,7 +40,6 @@ export const DataProvider = ({ children }) => {
         error,
         last: data?.events
         ?.sort((evtA, evtB) => new Date(evtA.date) > new Date(evtB.date) ? -1 : 1)[0] || null, // l'évènement le plus récent
-        // last: data?.events?.[data.events.length - 1] || null, le dernier évènement du tableau
       }}
     >
       {children}
